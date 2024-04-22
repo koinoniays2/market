@@ -6,7 +6,7 @@ export default function Header({ slideIndex, setSlideIndex }) {
 
   const style = {
     height : isSlideFirst ? "h-0" : "h-[60px]",
-    titleContainer: isSlideFirst ? "top-[100%] translate-y-[80%] " : "top-[10%]",
+    titleContainer: isSlideFirst ? "translate-y-[80%] " : "top-[10%]",
     title: isSlideFirst ? "text-[52px]" : "text-[38px] text-[#FFD700]",
   }
 
