@@ -44,15 +44,17 @@ export default function LandingPage() {
 
   return (
     <div>
+      <div className="bg-[#FFD700] flex justify-center">
       <Header slideIndex={slideIndex} setSlideIndex={setSlideIndex} />
-      <main className="w-full h-dvh overflow-hidden bg-[#FFD700] px-[20px]">
-        <SlideContainer slideIndex={slideIndex} setSlideIndex={setSlideIndex}>
-          <Hero />
-          <About />
-          {slideContents.map((element, index)=>(<Slide key={index} obj={element} />))}
-          <Footer />
-        </SlideContainer>
-      </main>
+        <main className="w-full max-w-5xl h-dvh overflow-hidden  px-[20px] md:px-[50px]">
+          <SlideContainer slideIndex={slideIndex} setSlideIndex={setSlideIndex}>
+            <Hero />
+            <About />
+            {slideContents.map((element, index)=>(<Slide key={index} obj={element} />))}
+            <Footer />
+          </SlideContainer>
+        </main>
+      </div>
     </div>
   );
 }
