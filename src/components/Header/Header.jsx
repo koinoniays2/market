@@ -13,6 +13,8 @@ export default function Header({ slideIndex, setSlideIndex }) {
   useEffect(()=>{
     if(slideIndex > 0) setIsSlideFirst(false);
     else setIsSlideFirst(true)
+
+    console.log(slideIndex)
   }, [slideIndex])
 
   const handleClick = () => {
@@ -20,7 +22,7 @@ export default function Header({ slideIndex, setSlideIndex }) {
   }
 
   return (
-    <header className={`w-full h-[60px] px-[20px] fixed z-50 bg-black duration-1000 ${style.height} `}>
+    <header className={`w-full px-[20px] fixed z-50 bg-black duration-1000 ${style.height} `}>
       <div className="w-full h-full flex justify-between">
         <div className="w-full relative ">
           <div className={`absolute left-0 ${style.titleContainer} duration-1000`}>
