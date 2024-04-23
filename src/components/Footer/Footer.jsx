@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="md:flex md:justify-between">
+        <div className="md:flex md:justify-between md:mt-[100px]">
           <div className="mt-[20px]">
             <h2 className="text-[20px]">STREETMARKET</h2>
             <ul>
