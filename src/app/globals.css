@@ -5,13 +5,13 @@
 @layer base {
   @font-face {
     font-family: "Joongnajoche";
-    src: url(/public/fonts/중나좋체\ Light.ttf);
+    src: url(/public/fonts/중나좋체Light.ttf);
     font-weight: 400;
   }
 
   @font-face {
     font-family: "Joongnajoche";
-    src: url(/public/fonts/중나좋체\ Medium.ttf);
+    src: url(/public/fonts/중나좋체Medium.ttf);
     font-weight: 700;
   }
 }
