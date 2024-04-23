@@ -3,6 +3,13 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 export default function UserForm() {
+  
+  const [isChecked, setIsChecked] = useState(false);
+  
+  const handleCheckClick = (event) => {
+    setIsChecked(event.target.checked)
+  }
+
   const {
     register,
     handleSubmit,
@@ -34,8 +41,8 @@ export default function UserForm() {
   };
   return (
     <div className="w-full">
-      <section className="w-full max-w-5xl my-0 mx-auto py-5">
-        <form className="flex flex-col gap-4 bg-black w-full max-w-96 p-5 rounded-lg" onSubmit={handleSubmit(onSubmit)}>
+      <div className="w-full max-w-5xl py-5 flex justify-center">
+        <form className="flex flex-col gap-4 bg-black w-full max-w-[500px] p-8 md:p-10 rounded-lg" onSubmit={handleSubmit(onSubmit)}>
           {/* --------------------이름 input-------------------- */}
           <input
             className="outline-none p-2 w-full rounded-lg"
@@ -70,13 +77,25 @@ export default function UserForm() {
             </span>
           )}
           {/*  --------------------체크박스 input-------------------- */}
-          <label className="text-white text-center py-4 accent-yellow-300">
+          <div className="w-full flex items-center">
+            <div className="mr-5">
+              <label htmlFor="checkbox" className="text-white w-5 h-5 border-[3px] border-white flex justify-center items-center">
+                {isChecked 
+                ? <img src="/svg/Check.svg" alt="Checked" /> 
+                : ""}
+              </label>
+            </div>
             <input
-              type="checkbox"
-              {...register("checkbox", { required: true })}
-            />
-            &nbsp; 알림톡 전송을 위해 이름과 연락처를 수집하고 있으며, 이외 용도로는 사용하지 않습니다. 동의하십니까?
-          </label>
+                onClick={handleCheckClick}
+                id="checkbox"
+                className="hidden"
+                type="checkbox"
+                {...register("checkbox", { required: true })}
+              />
+            <p htmlFor="checkbox" className="text-white py-4 accent-yellow-300">
+              알림톡 전송을 위해 이름과 연락처를 수집하고 있으며, 이외 용도로는 사용하지 않습니다. 동의하십니까?
+            </p>
+          </div>
           {/* 에러메세지 */}
           {errors?.checkbox && (
             <span className="text-red-500 text-sm">
@@ -92,7 +111,7 @@ export default function UserForm() {
             ""
           )}
         </form>
-      </section>
+      </div>
     </div>
   );
 }
