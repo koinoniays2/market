@@ -7,13 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        custom: ['Joongnajoche', ],
-      },
-      fontWeight: {
-        normal: 400,
-        bold: 700,
-      }
+      
     },
   },
   plugins: [],

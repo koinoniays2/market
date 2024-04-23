@@ -1,4 +1,19 @@
 import "./globals.css";
+import localFont from 'next/font/local'
+
+const font = localFont({
+  src:[
+    {
+      path: '../../public/fonts/중나좋체Light.ttf',
+      weight: '400'
+    },
+    {
+      path: '../../public/fonts/중나좋체Medium.ttf',
+      weight: '700'
+    },
+  ]
+})
+
 
 export const metadata = {
   title: "Create Next App",
@@ -8,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="font-custom">{children}</body>
+      <body className={`${font.className}`}>{children}</body>
     </html>
   );
 }

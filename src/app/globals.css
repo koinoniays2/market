@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  @font-face {
-    font-family: "Joongnajoche";
-    src: url(/public/fonts/중나좋체Light.ttf);
-    font-weight: 400;
-  }
-
-  @font-face {
-    font-family: "Joongnajoche";
-    src: url(/public/fonts/중나좋체Medium.ttf);
-    font-weight: 700;
-  }
-}
-
 h1, h2, h3, h4, h5, h6 {
   @apply font-bold
 }
