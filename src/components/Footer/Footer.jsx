@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="md:flex md:justify-between md:mt-[100px]">
+        <div className="mb-[40px] md:mt-20 md:flex md:justify-between">
           <div className="mt-[20px]">
             <h2 className="text-[20px]">STREETMARKET</h2>
             <ul>
@@ -39,8 +39,8 @@ export default function Footer() {
             </ul>
           </div>
           <div className="mt-[20px]">
-            <h2 className="text-[20px]">CONTAC</h2>
-            <ul className="mb-[40px]">
+            <h2 className="text-[20px]">CONTACT</h2>
+            <ul className="">
               <li className="flex gap-2">
                 <img src={email.src} alt="" />
                 streetmarket@gmail.com
