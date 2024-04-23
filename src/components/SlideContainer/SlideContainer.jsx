@@ -34,9 +34,9 @@ export default function SlideContainer( {children, slideIndex, setSlideIndex} ) 
   const onTouchChange = (event) => {
     const touchMoveClientY = event.touches[0].clientY;
 
-    if(touchStartClientY > touchMoveClientY && slideIndex < slideLength) {
+    if(touchStartClientY-5 > touchMoveClientY && slideIndex < slideLength) {
       setSlideIndex(slideIndex + 1);
-    } else if (touchStartClientY < touchMoveClientY && slideIndex > 0) {
+    } else if (touchStartClientY+5 < touchMoveClientY && slideIndex > 0) {
       setSlideIndex(slideIndex - 1);
     }
   }
