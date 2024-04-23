@@ -12,7 +12,7 @@ export default function Slide({ obj }) {
           image.target.style.opacity = "1"
           image.target.style.right = "50%"
           image.target.style.transform = "translateX(50%)"
-        },1000)
+        },500)
       }
     })
 
@@ -27,7 +27,7 @@ export default function Slide({ obj }) {
       <div className="text-[16px] pt-[20px]">
         <p>{obj.contents}</p>
       </div>
-      <div ref={imageContainer} className={`absolute pt-[100px] duration-1000 opacity-0 -right-1/3 ${obj.image === "/svg/QuicklyAndEasily.svg" ? "w-[250px]" : "w-[300px]"}`}>
+      <div ref={imageContainer} className={`absolute pt-[100px] duration-1000 bottom-[100px] opacity-0 -right-1/3 ${obj.image === "/svg/QuicklyAndEasily.svg" ? "w-[250px]" : "w-[300px]"}`}>
       <img 
           src={obj.image} 
           alt="About Image"
