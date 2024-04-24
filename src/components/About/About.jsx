@@ -16,7 +16,7 @@ export default function About() {
         <p>셀러들과 플리마켓 이용객이 모두 만족하는</p>
         <p>서비스를 제공하기 위해 노력하는 회사입니다.</p>
       </div>
-      <div className="w-full pt-[50px] absolute bottom-[50px]">
+      <div className="w-[320px] md:w-[650px] lg:w-[700px] pt-[50px] absolute bottom-[30px] md:bottom-0 right-1/2 translate-x-1/2 lg:right-0 lg:translate-x-0 ">
         <img 
           src="/svg/About.svg" 
           alt="About Image"
