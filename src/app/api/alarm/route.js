@@ -5,7 +5,7 @@ import { SolapiMessageService } from "solapi";
 
 const api_key = 'NCSJTUHVWWQ0EWKT'; 
 const api_secret = 'AU16IKRS7CVUPXXWOWP3ECGMEFBB7VCQ';
-const templateId = "KA01TP240418051004681cZARutDMsxv";
+const templateId = "KA01TP240423034538998qcbYvaZjNwK";
 const pfid = "KA01PF22041206411o33TFWW9Sl71Ppp";
 const messageService = new SolapiMessageService(api_key, api_secret);
 
@@ -51,7 +51,8 @@ export async function POST(req, res) {
                         templateId: templateId,
                         variables: name ? {
                             "#{name}": name,
-                            "#{region}" : "동성로"
+                            "#{region}" : "동성로",
+                            "#{url}": "market-roan-rho.vercel.app"
                         } : {},
                         disableSms: false // 필요에 따라 disableSms 옵션 사용
                     }
