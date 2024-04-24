@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "cardinal": "^2.1.1",
     "crypto": "^1.0.1",
     "mysql2": "^2.3.3",

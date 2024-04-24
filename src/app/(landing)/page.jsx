@@ -4,6 +4,7 @@ import About from "@/components/About/About";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
+import MsgSection from "@/components/MsgSection/MsgSection";
 import Slide from "@/components/Slide/Slide";
 import SlideContainer from "@/components/SlideContainer/SlideContainer";
 import { useState } from "react";
@@ -58,6 +59,7 @@ export default function LandingPage() {
           <SlideContainer slideIndex={slideIndex} setSlideIndex={setSlideIndex}>
             <Hero />
             <About />
+            <MsgSection />
             {slideContents.map((element, index)=>(<Slide key={index} obj={element} />))}
             <Footer />
           </SlideContainer>
