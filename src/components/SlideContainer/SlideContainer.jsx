@@ -44,14 +44,18 @@ export default function SlideContainer( {children, slideIndex, setSlideIndex} ) 
 
   return (
     <div 
-      ref={container} 
       onWheel={handleWheel}
       onTouchStart={handleTouchStart}
       onTouchMove={(handleTouchMove)}
-      className={`w-full duration-1000 `}
+      className={`w-full duration-1000 flex justify-center `}
       style={{transform : `translateY(-${slideIndex * 100}vh)`}}
     >
-      {children}
+      <div 
+        ref={container} 
+        className="max-w-5xl"
+      >
+        {children}
+      </div>
     </div>
   )
 }

@@ -55,7 +55,7 @@ export default function LandingPage() {
     <div>
       <div className="bg-[#FFD700] flex justify-center">
       <Header slideIndex={slideIndex} setSlideIndex={setSlideIndex} />
-        <main className="w-full max-w-5xl h-dvh overflow-hidden  px-[20px] md:px-[50px]">
+        <main className="w-full h-dvh overflow-hidden  px-[20px] md:px-[50px]">
           <SlideContainer slideIndex={slideIndex} setSlideIndex={setSlideIndex}>
             <Hero />
             <About />
