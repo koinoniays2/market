@@ -106,7 +106,7 @@ export default function UserForm() {
           <button className="w-full p-2 bg-yellow-300 rounded-lg">신청하기</button>
           {/* 서버 에러메세지 */}
           {msg ? (
-            <span className="text-red-500 text-sm">{msg.message}</span>
+           <span className={`${msg.message === "신청이 완료되었습니다." ? "text-blue-500" : "text-red-500"} text-sm`}>{msg.message}</span>
           ) : (
             ""
           )}
