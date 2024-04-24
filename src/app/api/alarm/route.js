@@ -28,6 +28,19 @@ function decryptPhoneNumber(encryptedPhoneNumber) {
     return decrypted;
 }
 
+// GET
+// async function getDBconnect() {
+//     const connection = await connectToDatabase();
+//     try {
+//         const [results, fields] = await connection.query("SELECT * FROM alarm");
+//         await connection.end();
+//         console.log(decryptPhoneNumber(results[1].mobile));
+//         return NextResponse.json({results});
+//     }catch (err) {
+//         console.log(err);
+//     }
+//   }
+  
 export async function POST(req, res) {
     const connection = await connectToDatabase();
     const data = await req.json(); // 요청 본문 파싱
@@ -38,6 +51,7 @@ export async function POST(req, res) {
         const [results, fields] = await connection.query(`SELECT * FROM alarm WHERE mobile = ?`, [encryptedMobile]);
         if (results.length > 0) {
             connection.end();
+            // getDBconnect(); // GET
             return NextResponse.json({ message: "이미 신청 완료된 번호입니다." });
         } else {
             try {
