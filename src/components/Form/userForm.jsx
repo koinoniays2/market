@@ -40,7 +40,7 @@ export default function UserForm() {
     }
   };
   return (
-    <div className="w-full">
+    <div className="w-full absolute bottom-[100px] md:bottom-[200px]">
       <div className="w-full max-w-5xl py-5 flex justify-center">
         <form className="flex flex-col gap-4 bg-black w-full max-w-[500px] p-8 md:p-10 rounded-lg" onSubmit={handleSubmit(onSubmit)}>
           {/* --------------------이름 input-------------------- */}
