@@ -52,7 +52,7 @@ export default function SlideContainer( {children, slideIndex, setSlideIndex} ) 
     >
       <div 
         ref={container} 
-        className="max-w-5xl"
+        className="w-full max-w-5xl lg:px-[50px]"
       >
         {children}
       </div>
