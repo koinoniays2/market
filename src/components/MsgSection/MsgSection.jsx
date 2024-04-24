@@ -33,7 +33,7 @@ export default function MsgSection() {
         <p>마켓기간 운영 중,  발생된 문제는 스트릿마켓 CS팀에게 맡겨주세요!</p>
       </div>
       <div className="w-full flex flex-row-reverse justify-center lg:justify-start">
-        <div className="w-full relative max-w-[668px] text-[14px] md:text-[18px] mt-5 md:mt-[80px]">
+        <div className="w-full relative max-w-[668px] text-[14px] md:text-[18px] mt-5 md:mt-[30px]">
           <img 
             className="hidden md:block absolute w-[300px] left-1/2 -translate-x-1/2"  
             src="/svg/Phone.svg" 
