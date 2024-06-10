@@ -55,7 +55,7 @@ export async function POST(req, res) {
             return NextResponse.json({ message: "이미 신청 완료된 번호입니다." });
         } else {
             try {
-                await connection.query(`INSERT INTO users (user_name, user_tel) VALUES (?, ?)`, [name, encryptedMobile]);
+                await connection.query(`INSERT INTO users (user_id, user_password, user_name, user_tel) VALUES (?, ?, ?, ?)`, [name, name, name, encryptedMobile]);
                 connection.end();
                 const response = await messageService.send({
                     to: mobile,
