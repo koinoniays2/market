@@ -48,14 +48,14 @@ export async function POST(req, res) {
     try {
         const encryptedMobile = encryptPhoneNumber(mobile); // 암호화
         // const decryptedMobile = encryptPhoneNumber(encryptedMobile); // 복호화
-        const [results, fields] = await connection.query(`SELECT * FROM alarm WHERE mobile = ?`, [encryptedMobile]);
+        const [results, fields] = await connection.query(`SELECT * FROM users WHERE user_tel = ?`, [encryptedMobile]);
         if (results.length > 0) {
             connection.end();
             // getDBconnect(); // GET
             return NextResponse.json({ message: "이미 신청 완료된 번호입니다." });
         } else {
             try {
-                await connection.query(`INSERT INTO alarm (name, mobile) VALUES (?, ?)`, [name, encryptedMobile]);
+                await connection.query(`INSERT INTO users (user_name, user_tel) VALUES (?, ?)`, [name, encryptedMobile]);
                 connection.end();
                 const response = await messageService.send({
                     to: mobile,
